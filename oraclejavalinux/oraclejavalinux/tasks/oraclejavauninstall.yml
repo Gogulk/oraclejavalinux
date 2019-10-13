@@ -1,0 +1,10 @@
+---
+  
+  - name: Set alternatives for Java
+    command: 'alternatives --remove "java" "{{java_name}}/bin/java"'
+
+  - name: Set alternatives for Java
+    command: 'alternatives --remove "javac" "{{java_name}}/bin/javac"'
+
+  - name: Make Java available for system
+    command: 'sudo rm -rf {{java_name}}'

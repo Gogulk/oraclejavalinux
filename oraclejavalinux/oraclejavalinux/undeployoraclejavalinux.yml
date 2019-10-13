@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  sudo: yes
+  vars:
+    download_folder: /usr/lib/jvm/
+    java_name: "{{download_folder}}/jdk-13/"
+  tasks:
+    - name: Install oraclejava
+      include: tasks/oraclejavauninstall.yml

@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  sudo: yes
+  vars:
+    download_url: https://download.oracle.com/otn-pub/java/jdk/13+33/5b8a42f3905b406298b72d750b6919f6/jdk-13_linux-x64_bin.tar.gz
+    download_folder: /usr/lib/jvm/
+    java_name: "{{download_folder}}/jdk-13/"
+    java_archive: "{{download_folder}}/jdk-13_linux-x64.bin.tar.gz"
+  tasks:
+    - name: Install oraclejava
+      include: tasks/oraclejavainstall.yml
